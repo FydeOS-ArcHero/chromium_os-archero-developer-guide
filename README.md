@@ -22,7 +22,7 @@ We will use a server as an example because we need to download and build lots of
 
 ## 1. Build Anbox
 
-Firstly, check whether your JDK version is 1.8.x，if not, install JDK version 1.8:
+Firstly, check whether your JDK version is 1.8.x, if not, install JDK version 1.8:
 
 ```bash
 # Check JDK version
@@ -62,7 +62,7 @@ $ scripts/create-package.sh \
     $PWD/../../out/target/product/x86_64/system.img
 ```
 
-When the script is done, there should be a file named `android.img` in the current directory。
+When the script is done, there should be a file named `android.img` in the current directory.
 
 ## 2. Build Chromium OS
 
