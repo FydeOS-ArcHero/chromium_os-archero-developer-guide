@@ -134,13 +134,4 @@ Finally, start to build Chromium and cross your fingers:
 
 You can download [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/) on your local dev machine and access **127.0.0.1:5901** to view VM. Note that "Options > Picture quality" needs to be set to **high** for this to work.
 
-After VM is connected successfully, you will see the welcome screen of Chromium OS. Connect to a network and log-in to the system. Open the shell by pressing `Ctrl` + `Alt` + `T` in Chromium, and launch Anbox with commands (admin password is `test0000`):
-
-```bash
-crosh> shell
-chronos@localhost / $ sudo XDG_RUNTIME_DIR=/run/chrome anbox-session
-```
-
-In several seconds, Anbox will start.
-
-![anbox-window](https://raw.githubusercontent.com/FydeOS/chromium_os-archero-developer-guide/master/screenshots/anbox-window.png)
+After VM is connected successfully, you will see the welcome screen of Chromium OS. Connect to a network and log-in to the system. In several seconds, you will see the Android apps in the launcher.
