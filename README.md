@@ -1,15 +1,15 @@
 # Chromium OS Archero Developer Guide
 
-This guide will walk you through the processing of replacing Chromium OS ARC++ with Anbox customized by FydeOS. Since Archero is still in an early stage of development, any contribution is welcome. If you have questions with this guide, just [file an issue](https://github.com/FydeOS/chromium_os-archero-developer-guide/issues/new).
+This guide will walk you through the processing of replacing Chromium OS ARC++ with Anbox customized by FydeOS. Since Archero is still in an early stage of development, any contribution is welcome. If you have questions with this guide, just [file an issue](https://github.com/FydeOS-ArcHero/chromium_os-archero-developer-guide/issues/new).
 
 These related projects are the followings:
 
-- [anbox_fydeos](https://github.com/FydeOS/anbox_fydeos): fork of [anbox/anbox](https://github.com/anbox/anbox).
-- [anbox_platform_manifests](https://github.com/FydeOS/anbox_platform_manifests): fork of [anbox/platform_manifests](https://github.com/anbox/platform_manifests), Android manifest for building [AOSP](https://source.android.com/).
-- [chromiumos_anbox_manifest](https://github.com/FydeOS/chromiumos_anbox_manifest): fork of [chromiumos/manifest](https://chromium.googlesource.com/chromiumos/manifest/), Chromium OS manifest for building Chromium OS.
-- [overlay-amd64-anbox-generic](https://github.com/FydeOS/overlay-amd64-anbox-generic): board extended on `amd64-generic` with Anbox's dependencies.
-- [platform_frameworks_base](https://github.com/FydeOS/platform_frameworks_base): fork of [anbox/plaform_framework_base](https://github.com/anbox/platform_frameworks_base), base components of AOSP framework.
-- [project-archero](https://github.com/FydeOS/project-archero): solution to replace Google's ARC++ based on Anbox.
+- [anbox_fydeos](https://github.com/FydeOS-ArcHero/anbox_fydeos): fork of [anbox/anbox](https://github.com/anbox/anbox).
+- [anbox_platform_manifests](https://github.com/FydeOS-ArcHero/anbox_platform_manifests): fork of [anbox/platform_manifests](https://github.com/anbox/platform_manifests), Android manifest for building [AOSP](https://source.android.com/).
+- [chromiumos_anbox_manifest](https://github.com/FydeOS-ArcHero/chromiumos_anbox_manifest): fork of [chromiumos/manifest](https://chromium.googlesource.com/chromiumos/manifest/), Chromium OS manifest for building Chromium OS.
+- [overlay-amd64-anbox-generic](https://github.com/FydeOS-ArcHero/overlay-amd64-anbox-generic): board extended on `amd64-generic` with Anbox's dependencies.
+- [platform_frameworks_base](https://github.com/FydeOS-ArcHero/platform_frameworks_base): fork of [anbox/plaform_framework_base](https://github.com/FydeOS-ArcHero/platform_frameworks_base), base components of AOSP framework.
+- [project-archero](https://github.com/FydeOS-ArcHero/project-archero): solution to replace Google's ARC++ based on Anbox.
 
 ## 0. Hardware requirements
 
@@ -44,7 +44,7 @@ Next, ready to download and build Anbox:
 ```bash
 $ mkdir $HOME/anbox-work
 $ cd $HOME/anbox-work
-$ repo init -u https://github.com/FydeOS/anbox_platform_manifests.git -b anbox
+$ repo init -u https://github.com/FydeOS-ArcHero/anbox_platform_manifests.git -b anbox
 $ repo sync -j4
 $ . build/envsetup.sh
 $ lunch anbox_x86_64-userdebug
@@ -71,7 +71,7 @@ Download Chromium OS source code:
 ```bash
 $ mkdir $HOME/chromiumos
 $ cd $HOME/chromiumos
-$ repo init -u https://github.com/FydeOS/chromiumos_anbox_manifest.git --repo-url https://chromium.googlesource.com/external/repo.git -b release-R80-12739.B
+$ repo init -u https://github.com/FydeOS-ArcHero/chromiumos_anbox_manifest.git --repo-url https://chromium.googlesource.com/external/repo.git -b release-R83-13020.B
 $ repo sync -j4
 ```
 
