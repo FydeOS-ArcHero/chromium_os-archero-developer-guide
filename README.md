@@ -95,10 +95,6 @@ Firstly, get Chromium source code and its dependencies:
 ```bash
 $ mkdir ~/chromium && cd ~/chromium
 $ fetch --nohooks chromium
-$ cd src
-$ git checkout tags/80.0.3987.165
-$ ./build/install-build-deps.sh
-$ gclient runhooks
 ```
 
 Next, edit `.gclient` located in `chromium` directory and add a line:
@@ -107,22 +103,20 @@ Next, edit `.gclient` located in `chromium` directory and add a line:
 target_os = ['chromeos']
 ```
 
+Next, add branch to `anbox_chromium`:
+
+```
+$ cd src
+$ git remote add github https://github.com/FydeOS-ArcHero/anbox_chromium.git
+$ git fetch github
+$ git checkout -b anbox-83.0.4103.122 github/anbox-83.0.4103.122
+```
+
 Now `cros_sdk` is ready to build Chromium:
 
 ```bash
 $ cd $HOME
 $ ./chromiumos/chromite/bin/cros_sdk --nouse-image --chrome_root ./chromium
-```
-
-After `cros_sdk` is executed, edit `../third_party/chromiumos-overlay/eclass/cros-board.eclass` to insert `amd64-anbox-generic` into `ALL_BOARDS` configuration, like:
-
-```
-ALL_BOARDS=(
-    amd64-anbox-generic
-    acorn
-    amd64-corei7
-    ...
-)
 ```
 
 Finally, start to build Chromium and cross your fingers:
